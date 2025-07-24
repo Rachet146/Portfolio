@@ -1,0 +1,307 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+:root {
+  --primary-color: #4CAF50;
+  --secondary-color: #333;
+  --accent-color: #f4f4f4;
+  --text-color: #f4f4f4;
+  --font-main: 'Poppins', sans-serif;
+}
+body {
+  font-family: var(--font-main);
+  color: var(--text-color);
+  background-color: lightslategrey;
+  line-height: 1.6;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background: var(--secondary-color);
+  color: white;
+}
+nav ul {
+  display: flex;
+  list-style: none;
+}
+nav ul li {
+  margin-left: 20px;
+}
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+section {
+  padding: 60px 10px;
+  max-width: 1200px;
+  margin: auto;
+}
+h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  text-align: center;
+}
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+.project-card {
+  display: flex;
+  flex-direction: column;       /* Elementos en columna */
+  justify-content: space-between; /* Espacia arriba y abajo */
+  align-items: center;          /* Centra horizontal */
+  text-align: center;
+  padding: 20px;
+  background: rgb(63, 63, 63);
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease;
+  height: 400px; /* Clave para que todas tengan la misma altura */
+}
+
+.project-card img {
+  max-width: 100%;
+  max-height: 150px; /* Controla tamaño de imagen */
+  object-fit: contain;
+}
+
+.project-card h3 {
+  margin: 10px 0;
+}
+
+.project-card p {
+  flex-grow: 0; 
+  margin-bottom: 5px;
+}
+
+.project-card a {
+  display: inline-block;
+  transition: background 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-5px); /* Sube ligeramente la card */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Da más sombra */
+}
+
+.project-card img {
+  transition: transform 0.3s ease;
+}
+
+.project-card:hover img {
+  transform: scale(1.05); /* Zoom sutil en la imagen */
+}
+
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    display: none; 
+  }
+}
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background: var(--primary-color);
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background 0.3s ease;
+}
+.btn:hover {
+  background: #45a049;
+}
+section {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.hero{
+    text-align: center;
+}
+.about{
+    text-align: center;
+}
+.projects{
+    text-align: center;
+}
+.skills{
+    text-align: center;
+}
+.contact{
+    text-align: center;
+}
+
+.footer{
+    text-align: center;
+    background-color: #333;
+}
+
+img.icon {
+  width: 80px;
+  height: 80px;
+  border-radius: 100%;
+}
+
+.page{
+    width: 80%;
+    text-align: center;
+    background-color: darkslategray;
+    margin: 0 auto; 
+}
+a {
+    color: lightblue;
+}
+
+a:hover {
+    color: #ff9800; /* Color cuando pasas el mouse */
+}
+
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.skill-card {
+  background: rgb(63, 63, 63);
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  text-align: center;
+  padding: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skill-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+}
+
+.skill-card h3 {
+  color: #f4f4f4;
+  font-size: 1.1rem;
+}
+
+
+/* Contenedor de contacto */
+.contact {
+  background-color: rgb(63, 63, 63); /* Color oscuro para armonizar con el resto */
+  padding: 40px 20px;
+  border-radius: 10px;
+  max-width: 600px;
+  margin: 0 auto; /* Centrar */
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+}
+
+/* Título */
+.contact h2 {
+  margin-bottom: 25px;
+  font-size: 2rem;
+  color: #f4f4f4;
+  text-align: center;
+}
+
+/* Formulario */
+#contact-form {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Inputs y textarea */
+#contact-form input,
+#contact-form textarea {
+  padding: 12px 15px;
+  margin-bottom: 20px;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-family: var(--font-main);
+  resize: vertical;
+  background-color: #e0e0e0;
+  color: #333;
+  transition: box-shadow 0.3s ease;
+}
+
+/* Efecto focus */
+#contact-form input:focus,
+#contact-form textarea:focus {
+  outline: none;
+  box-shadow: 0 0 6px var(--primary-color);
+  background-color: #fff;
+}
+
+/* Botón */
+#contact-form button {
+  padding: 12px;
+  background-color: var(--primary-color);
+  color: white;
+  font-size: 1.1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#contact-form button:hover {
+  background-color: #45a049;
+}
+
+/* Opcional: responsividad */
+@media (max-width: 480px) {
+  .contact {
+    padding: 30px 15px;
+  }
+  #contact-form input,
+  #contact-form textarea {
+    font-size: 0.9rem;
+  }
+}
+
+
+
+.direct-contact p {
+    font-size: 1.1rem;
+    margin: 8px 0;
+}
+
+.direct-contact a {
+    color: #00adb5;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.direct-contact a:hover {
+    color: #ff5722;
+    text-decoration: underline;
+}
+
+
+.hero img {
+    max-width: 400px;  /* Ajusta según diseño */
+    border-radius: 10%; /* Para foto circular */
+    display: block;
+    margin: 15px auto;
+}
+

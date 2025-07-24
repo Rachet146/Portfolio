@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Lucas Moreno Castro | Portfolio</title>
+        <link rel="icon" href="Assets/Iconos/LMC (1).png" type="image/x-icon" />
+        <link rel="stylesheet" href="Portfolio.css" />
+    </head>
+    <body>
+        <!-- Header / Navigation -->
+        <header>
+            <nav>
+            <img class="icon" src="Assets/iconos/LMC (1).png" alt="Project 1 Screenshot">
+            <h1 class="logo">Lucas Moreno Castro</h1>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            </nav>
+        </header>
+
+        <div id = "page" class = "page">
+            <!-- Hero Section -->
+            <section id="hero" class = "hero">
+                <h2>Hello, I'm Lucas Moreno Castro</h2>
+                <img src = "Assets/Fotos/IMG_20250711_121225.jpg" alt = "fsafa">
+                <p>Web Developer | Game Designer</p>
+                <a href="#projects" class="btn">View My Work</a>
+            </section>
+            <!-- About Section -->
+            <section id="about" class = "about">
+                <h2>About Me</h2>
+                    <p>Aspiring GameDeveloper and computer scientist, my aim is to improve lives, wether it be by
+                    entretaining people with my games or help in web design.
+                </p>
+                
+            </section>
+
+            <!-- Projects Section -->
+            <section id="projects" class = "projects">
+                <h2>Projects</h2>
+                <div class="project-grid">
+                    <div class="project-card">
+                        <img src="Assets/Fotos/Flagnet by RachetTheDev - Google Chrome 24_07_2025 15_22_50.png" alt="Project 1 Screenshot">
+                        <h3>Puzzle Game</h3>
+                        <p>A game i made for the Kenney Game Jam 2024</p>
+                        <a href="https://rachetthedev.itch.io/flagnet" target="_blank">Demo</a>
+                    </div>
+                    <div class="project-card">
+                        <img src="Assets/Fotos/AyE.png" alt="Project 1 Screenshot">
+                        <h3>Web</h3>
+                        <p>A web i made for the enterprise Agricultura y Ensayo</p>
+                        <a href="https://okta.agriculturayensayo.com/" target="_blank">Web</a>
+                    </div>
+                <!-- Repeat for more projects -->
+                </div>
+            </section>
+
+            <!-- Skills Section -->
+            <section id="skills" class = "skills">
+                <h2>Skills</h2>
+                <div class="skills-grid">
+                    <div class="skill-card"><h3>HTML5</h3></div>
+                    <div class="skill-card"><h3>CSS</h3></div>
+                    <div class="skill-card"><h3>JavaScript</h3></div>
+                    <div class="skill-card"><h3>Python</h3></div>
+                    <div class="skill-card"><h3>Unity</h3></div>
+                </div>
+            </section>
+
+            <!-- Contact Section -->
+            <section id="contact" class = "contact">
+                <h2>Contact</h2>
+                <form id="contact-form">
+                <input type="text" name="name" placeholder="Your Name" required><br>
+                <input type="email" name="email" placeholder="Your Email" required><br>
+                <textarea name="message" placeholder="Your Message" required></textarea><br>
+                <button type="submit">Send Message</button>
+                </form>
+                <div id="form-message" role="alert" aria-live="polite" style="margin-top: 15px; font-weight: bold;"></div>
+                <div class="direct-contact" style="margin-top: 25px; text-align: center;">
+                <p><strong>Email:</strong> <a href="mailto:lmoreng10@gmail.com">lmoreng10@gmail.com</a></p>
+                <p><strong>Phone:</strong> <a href="tel:+34635973317">+34 635 973 317</a></p>
+            </div>
+            </section>
+
+        </div>
+
+
+        <!-- Footer -->
+        <footer class = "footer">
+                <p>&copy; 2025 Lucas Moreno Castro. All Rights Reserved.</p>
+        </footer>
+
+        <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+        <script>
+            (function() {
+                emailjs.init("ukQJlJiEmvn_nANfo"); // PUBLIC KEY de EmailJS
+            })();
+        </script>
+        <script src="Portfolio.js"></script>
+
+    </body>
+</html>
