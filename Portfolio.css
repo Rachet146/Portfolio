@@ -298,7 +298,7 @@ a:hover {
 }
 
 
-.hero img {
+.hero img{
     max-width: 150px;  /* Ajusta según diseño */
     border-radius: 10%; /* Para foto circular */
     display: block;
