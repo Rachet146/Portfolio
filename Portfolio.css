@@ -336,44 +336,5 @@ a:hover {
     border-radius: 10%; 
   }
 
-  .about img {
-    max-width: 80%;
-    margin-bottom: 15px;
-  }
-
-  .project-grid {
-    grid-template-columns: 1fr; /* Una columna en móviles */
-  }
-
-  .skills-grid {
-    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-  }
-
-  .page {
-    width: 95%; /* Ocupa más ancho en pantallas pequeñas */
-  }
-}
-
-/* Dispositivos muy pequeños (menos de 480px) */
-@media (max-width: 480px) {
-  nav {
-    padding: 15px;
-  }
-
-  nav a {
-    font-size: 1rem;
-  }
-
-  h2 {
-    font-size: 1.5rem;
-  }
-
-  .btn {
-    padding: 8px 15px;
-    font-size: 0.9rem;
-  }
-
-}
-
 
 
