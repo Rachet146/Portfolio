@@ -375,6 +375,12 @@ a:hover {
 
 }
 
-
+@media (max-width: 768px) {
+  nav ul li a[href="#about"],
+  nav ul li a[href="#skills"],
+  nav ul li a[href="#projects"] {
+    display: none;
+  }
+}
 
 
