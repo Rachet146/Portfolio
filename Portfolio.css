@@ -299,11 +299,85 @@ a:hover {
 
 
 .hero img {
-    max-width: 75%;  /* Ajusta según diseño */
+    max-width: 50%;  /* Ajusta según diseño */
     border-radius: 10%; /* Para foto circular */
     display: block;
     margin: 15px auto;
 }
+
+
+/* =========================
+   RESPONSIVE DESIGN
+   ========================= */
+
+/* Dispositivos pequeños (móviles) */
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  nav ul {
+    flex-direction: column;
+    margin-top: 10px;
+    display: flex; /* Cambiar a flex para mostrar en móviles */
+  }
+
+  nav ul li {
+    margin: 10px 0;
+  }
+
+  section {
+    padding: 30px 10px;
+  }
+
+  .hero img {
+    max-width: 90%; /* Más ancho en móviles */
+    border-radius: 10%; 
+  }
+
+  .about img {
+    max-width: 80%;
+    margin-bottom: 15px;
+  }
+
+  .project-grid {
+    grid-template-columns: 1fr; /* Una columna en móviles */
+  }
+
+  .skills-grid {
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  }
+
+  .page {
+    width: 95%; /* Ocupa más ancho en pantallas pequeñas */
+  }
+}
+
+/* Dispositivos muy pequeños (menos de 480px) */
+@media (max-width: 480px) {
+  nav {
+    padding: 15px;
+  }
+
+  nav a {
+    font-size: 1rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  .btn {
+    padding: 8px 15px;
+    font-size: 0.9rem;
+  }
+
+  .hero img {
+    max-width: 95%;
+  }
+}
+
 
 
 
